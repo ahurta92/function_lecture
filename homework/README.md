@@ -43,6 +43,8 @@ We declare the function in `problems.h` as so.
 void print(const std::vector<int>& v,const string& label);
 ```
 
+### Definition
+
 Now that we have declared the function we still have to provide a
 function definition.  In this homework we place all the function
 definitions in `problems.`.  To define a function we
@@ -94,6 +96,53 @@ int main(){
     string label="my label";// create a label
     vector<int> v={1,2,3,4,6,9};// create a vector
     print(v,label);// print the vector with a label
+}
+```
+
+## Problem 2
+
+Problem 2 is to write a function that creates a vector of Fibonacci numbers.
+The function should have 4 inputs
+Inputs:
+    - `int x`  the first number in the sequence
+    - `int y`  the second number in the sequence
+    - `vector<int>& v` The vector that we are modifying to save the sequnce 
+    - `int n`
+
+Again the first task is to declare the function in `problems.h`.
+Since we are passing the vector that we are modifying as an input the return
+type will be `void`.  
+
+```cpp
+void fibonacci(int x,int y,vector<int>& v,int n);
+```
+
+Notice `&`  that means we are passing the argument by reference.
+This basically means we are passing the actual object from the scope
+of where the function is being called from instead of just
+creating a copy of vector in the function scope.  For those who 
+are not familiar with pass by reference vs pass by value please read
+the following link [link](https://www.cs.fsu.edu/~myers/c++/notes/references.html).
+
+Here is the function definition.  The task is to create a Fibonacci sequence
+of size n.  The first step is to clear the vector that we pass in.  It is
+possible the vector we pass in already has values therefore we clear it
+using `v.clear()`.  `v.clear()` is a function that clears our vector.
+Since `x` and `y` are the first two values we can add those values into the first two
+locations using `v.push_back(x)` and `v.push_back(y)`.
+
+To create the rest of the we need to add the rest of the values from position 
+2 all the way to position `n-1`.  We do this with a for loop.  For each value
+we are adding we simply push_back the sum of the previous two values.  
+
+```cpp
+void fibonacci(int x,int y,vector<int>&v,int n){
+    v.clear();// clear vector`
+    v.push_back(x);// push back first value [x]
+    v.push_back(y);// [x,y]
+    for(int i=2;i<n;i++){
+       v.push_back(v[i-1]+v[i-2]);// push back the previous two
+    }
 }
 ```
 
