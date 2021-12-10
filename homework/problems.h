@@ -58,7 +58,7 @@ void fibonacci(int x,int y,vector<int>& v,int n);
  */
 
 vector<int> reverse(vector<int>);
-void reverse_swap(vector<int>);
+void reverse_swap(vector<int>& );
 
 /*Problem 5
  * Write a function that given two vector<double>s price
@@ -69,6 +69,8 @@ void reverse_swap(vector<int>);
  * Test your code in problem5.cc
  */
 
+double productSum(vector<double> price,vector<double> weight);
+
 /*Problem 6
  *
  * Write a function maxv() that returns the larges element of a vector argument
@@ -77,6 +79,9 @@ void reverse_swap(vector<int>);
  * Test your code in problem6.cc
  */
 
+int maxv(vector<int>&v);
+
+void problem7(vector<int>&v, int &small,int& large,double &mean,int&median);
 /*Problem 7
  *
  * Write a function that finds the smallest and the largest
