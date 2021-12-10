@@ -1,12 +1,14 @@
 # Functions Homework
 
+To find the solutions please go pull the code on [Github](https://github.com/ahurta92/function_lecture)
+
 For this homework your task was to write a set of functions 
 to perform a series of tasks defined in `problems.h`. For each
 problem you needed to write a function which completes a task and
 then call the function from the main function in `problemX.cc`.  Notice 
 that all the function definitions are written in `problems.cc`.  If 
 you do not understand what function definitions and function declarations 
-please read [](https://www.tutorialspoint.com/cplusplus/cpp_functions.htm).  
+please read [link](https://www.tutorialspoint.com/cplusplus/cpp_functions.htm).  
 
 ## Some general notes on functions
 
@@ -310,11 +312,15 @@ In problem 6 we need to write a function to grab the largest value from
 a vector.  As a good example I used the main function from problem2 to see 
 if the max `int` approximation is in fact the largest value `int`.  Here 
 I just present the declaration, definition, and main function.
+
 ### Declaration
+
 ```cpp
 int maxv(vector<int>&v);
 ```
+
 ### Definition
+
 ```cpp
 int maxv(vector<int>&v){
 
@@ -328,7 +334,9 @@ int maxv(vector<int>&v){
 
 }
 ```
+
 ### main function
+
 ```cpp
 #include "problems.h"
 
@@ -359,6 +367,6 @@ form a function therefore you ust pass the variables by reference to return all
 the variables. Try this problem on your own before you look up the solutions
 
 You can find all the code for this homework here
-[Functions Lecture]()
+[Functions Lecture](https://github.com/ahurta92/function_lecture)
 
 
